@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Min Portofølje</title>
+        <title>Min Portefølje</title>
     </head>
     <body>
       <header>
         <h1>Mats Vik Pettersen</h1>
-        <nav>
+        <nav aria-label="Hovedmeny">
             <ul>
                 <li><a href="#hjem">Hjem</a></li>
                 <li><a href="#om-meg">Om meg</a></li>
@@ -18,12 +18,12 @@
         </nav>
       </header>
       <main>
-        <section id="hjem">
-            <h2>Velkommen til min portofølje!</h2>
+        <section id="hjem" aria-labelledby="hjem-tittel">
+            <h2 id="hjem-tittel">Velkommen til min portofølje!</h2>
             <p>Jeg er en webutvikler med lidenskap for å skape vakre og funksjonelle nettsider</p>
         </section>
-        <section id="om-meg">
-            <h2>Om meg</h2>
+        <section id="om-meg" aria-labelledby="om-meg-tittel">
+            <h2 id="om-meg-tittel">Om meg</h2>
             <p>Jeg er en webutvikler med fokus på å lage brukervennlige og estetisk tiltalende nettsider. Jeg vil utvikle min erfaring med HTML, CSS, og JavaScript, og jeg er alltid på utkikk etter nye utfordringer for å utvide min kompetanse.</p>
             <h3>Mine ferdigheter:</h3>
             <ul>
@@ -31,43 +31,50 @@
                 <li>CSS</li>
                 <li>JavaScript</li>
                 <li>Responsive Design</li>
-                <li>Versonskontroll med Git</li>
+                <li>Versjonskontroll med Git</li>
             </ul>
         </section>
-        <section id="prosjekter">
-            <h2>Mine prosjekter</h2>
-            <div>
+        <section id="prosjekter" aria-labelledby="prosjekter-tittel">
+            <h2 id="prosjekter-tittel">Mine prosjekter</h2>
+            <article>
                 <h3>Prosjekt 1</h3>
                 <p>Her kan du legge inn beskrivelse av prosjekt 1 (ikke laget enda).</p>
-            </div>
-            <div>
+            </article>
+            <article>
                 <h3>Prosjekt 2</h3>
                 <p>Her kan du legge inn beskrivelse av prosjekt 2 (ikke laget enda).</p>
-            </div>
-            <div>
+            </article>
+            <article>
                 <h3>Prosjekt 3</h3>
                 <p>Her kan du legge inn beskrivelse av prosjekt 3 (ikke laget enda).</p>
-            </div>
+            </article>
         </section>
-        <section id="kontakt">
-            <h2>Kontakt meg</h2>
-            <p>Du kan kontakte meg via e-post på <a href"matsvp@hiof.no">matsvp@hiof.no</a> eller fylle ut skjemaet nedenfor</p>
-            <form>
+        <section id="kontakt" aria-labelledby="kontakt-tittel">
+            <h2 id="kontakt-tittel">Kontakt meg</h2>
+            <p>Du kan kontakte meg via e-post på <a href="mailto:matsvp@hiof.no">matsvp@hiof.no</a> eller fylle ut skjemaet nedenfor</p>
+            <form aria-labelledby="kontakt-tittel">
                 <label for="navn">Navn:</label>
                 <input type="text" id="navn" name="navn" placeholder="Ditt navn" required>
                 
-                <label for="email"></label>
+                <label for="email">E-post</label>
                 <input type="email" id="email" name="email" placeholder="Din-epost" required>
 
                 <label for="melding">Melding</label>
                 <textarea id="melding" name="melding" placeholder="Din melding" required></textarea>
+
                 <input type="submit" value="Send melding">
             </form>
         </section>
       </main> 
-      <footer>
-        <p>&copy; 2024 Mats</p>
-        <p><a href="#hjem">Tilbake til toppen</a></p>
+      <footer aria-label="Sideinformasjon">
+        <p>&copy; 2024 Mats. Alle rettigheter reservert</p>
+        <nav>
+            <ul>
+                <li><a href="#hjem">Tilbake til toppen</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#prosjekter">Prosjekter</a></li>
+            </ul>
+        </nav>
     </footer> 
     </body>
 </html>
