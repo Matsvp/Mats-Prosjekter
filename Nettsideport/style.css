@@ -1,0 +1,292 @@
+/* Grunnleggende stilsett */
+
+:root {
+    /* Definerer CSS-variabler for farger og skrifttype */
+    --primary-color: #000000; /* Primærfarge - svart */
+    --secondary-color: #ffffff; /* Sekundærfarge - hvit */
+    --accent-color: #007afd; /* Aksentfarge - blå */
+    --font-family: 'Helvetica Neue', Arial, sans-serif; /* Standard skrifttype */
+}
+
+body {
+    margin: 0; /* Fjerner standard margin rundt siden */
+    padding: 0; /* Fjerner standard padding */
+    font-family: var(--font-family); /* Setter standard skrifttype */
+    color: var(--primary-color); /* Setter tekstfargen til primærfargen */
+    background-color: var(--secondary-color); /* Setter bakgrunnsfargen til sekundærfargen */
+    line-height: 1.6; /* Angir linjeavstand for bedre lesbarhet */
+}
+
+/* Navigasjonsmeny */
+
+header {
+    position: fixed; /* Fikserer headeren øverst på siden ved scrolling */
+    width: 100%; /* Gjør headeren like bred som vinduet */
+    background-color: var(--secondary-color); /* Setter bakgrunnsfarge */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Legger til en svak skygge under headeren */
+    z-index: 1000; /* Sørger for at headeren ligger over annet innhold */
+}
+
+header h1 {
+    font-size: 32px; /* Størrelse på hovedoverskriften i headeren */
+    margin: 0; /* Fjerner standard margin */
+    padding: 20px 40px; /* Legger til padding rundt teksten */
+}
+
+nav {
+    display: flex; /* Bruker flexbox for å arrangere menyen */
+    justify-content: center; /* Sentraliserer menyen horisontalt */
+    padding: 10px 0; /* Legger til vertikal padding */
+}
+
+nav ul {
+    display: flex; /* Bruker flexbox for listeelementene */
+    list-style: none; /* Fjerner punktmerking på listen */
+    margin: 0; /* Fjerner standard margin */
+    padding: 0; /* Fjerner standard padding */
+}
+
+nav ul li {
+    margin: 0 30px; /* Legger til horisontal margin mellom menypunktene */
+}
+
+nav ul li a {
+    text-decoration: none; /* Fjerner understreking på lenker */
+    color: var(--primary-color); /* Setter lenkefargen */
+    font-weight: 500; /* Setter skriftvekt */
+    font-size: 18px; /* Setter skriftstørrelse */
+}
+
+nav ul li a:hover {
+    color: var(--accent-color); /* Endrer farge ved hover */
+}
+
+/* Hovedinnhold */
+
+main {
+    max-width: 1200px; /* Setter maksimal bredde på hovedinnholdet */
+    margin: 0 auto; /* Sentraliserer hovedinnholdet */
+    padding: 160px 40px 60px; /* Legger til padding (topp, sider, bunn) */
+    /* 160px topp-padding for å kompensere for den faste headeren */
+}
+
+section {
+    margin-bottom: 80px; /* Legger til margin under hver seksjon */
+    scroll-margin-top: 160px; /* Justerer posisjon ved navigasjon til anker */
+}
+
+h2 {
+    font-size: 36px; /* Størrelse på seksjonstitler */
+    margin-bottom: 30px; /* Legger til margin under tittelen */
+}
+
+p {
+    font-size: 20px; /* Størrelse på brødtekst */
+    margin-bottom: 20px; /* Legger til margin under avsnitt */
+}
+
+/* Om meg seksjon */
+
+.om-meg-innhold {
+    display: flex; /* Bruker flexbox for å plassere bilde og tekst side om side */
+    align-items: center; /* Justerer elementene vertikalt på midten */
+}
+
+.om-meg-innhold img {
+    width: 250px; /* Setter bredde på bildet */
+    height: auto; /* Bevarer bildeforhold */
+    margin-right: 40px; /* Legger til margin til høyre for bildet */
+    border-radius: 10px; /* Gjør hjørnene på bildet avrundet */
+}
+
+.om-meg-innhold figcaption {
+    flex: 1; /* Lar teksten fylle tilgjengelig plass */
+}
+
+.om-meg-innhold ul {
+    list-style: none; /* Fjerner punktmerking på listen */
+    padding: 0; /* Fjerner standard padding */
+    display: flex; /* Bruker flexbox for listeelementene */
+    flex-wrap: wrap; /* Lar elementene bryte til neste linje ved behov */
+}
+
+.om-meg-innhold ul li {
+    background-color: #f4f4f4; /* Setter bakgrunnsfarge på ferdighetsmerkene */
+    margin: 5px; /* Legger til margin rundt hvert element */
+    padding: 10px 20px; /* Legger til padding inni hvert element */
+    border-radius: 5px; /* Avrunder hjørnene */
+    font-size: 18px; /* Størrelse på teksten i ferdighetsmerkene */
+}
+
+/* Prosjektseksjon */
+
+.prosjekt-liste {
+    display: grid; /* Bruker grid-layout for prosjektene */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatisk justering av kolonner */
+    gap: 20px; /* Avstand mellom grid-elementene */
+}
+
+article {
+    margin-bottom: 0; /* Fjerner margin under artikler (grid-gap håndterer avstanden) */
+}
+
+article h3 {
+    font-size: 30px; /* Størrelse på prosjektitler */
+    margin-bottom: 15px; /* Legger til margin under tittelen */
+}
+
+article p {
+    font-size: 18px; /* Størrelse på prosjektbeskrivelsen */
+}
+
+article img {
+    width: 100%; /* Bildet fyller hele bredden av containeren */
+    height: auto; /* Bevarer bildeforhold */
+    border-radius: 5px; /* Avrunder hjørnene på bildet */
+    margin-bottom: 15px; /* Legger til margin under bildet */
+}
+
+/* Kontaktskjema */
+
+form {
+    display: flex; /* Bruker flexbox */
+    flex-direction: column; /* Arrangerer elementene vertikalt */
+    max-width: 1200px; /* Setter maksimal bredde på skjemaet */
+}
+
+form label {
+    font-weight: 500; /* Setter skriftvekt for etiketter */
+    margin-bottom: 5px; /* Legger til margin under etiketten */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 12px; /* Legger til padding inni inputfeltene */
+    margin-bottom: 20px; /* Legger til margin under hvert felt */
+    border: 1px solid #ccc; /* Setter en lys grense rundt feltene */
+    border-radius: 5px; /* Avrunder hjørnene */
+    font-size: 18px; /* Størrelse på teksten i feltene */
+}
+
+form textarea {
+    resize: vertical; /* Lar brukeren endre høyden på tekstområdet */
+    min-height: 150px; /* Setter minimumshøyde på tekstområdet */
+    max-height: 400px;
+}
+
+form input[type="submit"] {
+    padding: 15px; /* Legger til padding inni knappen */
+    background-color: var(--primary-color); /* Setter bakgrunnsfarge */
+    color: var(--secondary-color); /* Setter tekstfarge */
+    border: none; /* Fjerner kantlinje */
+    border-radius: 5px; /* Avrunder hjørnene */
+    font-size: 20px; /* Størrelse på knappeteksten */
+    cursor: pointer; /* Endrer musepekeren ved hover */
+}
+
+form input[type="submit"]:hover {
+    background-color: #333; /* Endrer bakgrunnsfarge ved hover */
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color); /* Setter bakgrunnsfarge */
+    color: var(--secondary-color); /* Setter tekstfarge */
+    padding: 50px 0; /* Legger til vertikal padding */
+    text-align: center; /* Sentraliserer teksten */
+}
+
+footer p {
+    margin: 0 0 20px 0; /* Legger til margin under paragrafen */
+    font-size: 16px; /* Størrelse på teksten */
+}
+
+footer nav ul {
+    display: flex; /* Bruker flexbox for navigasjonslisten */
+    justify-content: center; /* Sentraliserer listen horisontalt */
+    list-style: none; /* Fjerner punktmerking */
+    padding: 0; /* Fjerner standard padding */
+}
+
+footer nav ul li {
+    margin: 0 20px; /* Legger til horisontal margin mellom lenkene */
+}
+
+footer nav ul li a {
+    color: var(--secondary-color); /* Setter lenkefargen */
+    text-decoration: none; /* Fjerner understreking */
+    font-size: 16px; /* Størrelse på lenketeksten */
+}
+
+footer nav ul li a:hover {
+    color: var(--accent-color); /* Endrer farge ved hover */
+}
+
+/* Responsivt design for mobil */
+
+@media (max-width: 768px) {
+    /* Justeringer for skjermer med bredde 768px eller mindre */
+
+    header h1 {
+        font-size: 24px; /* Reduserer skriftstørrelsen i headeren */
+        padding: 15px 20px; /* Justerer padding */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Reduserer margin mellom menypunktene */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Reduserer skriftstørrelsen på lenkene */
+    }
+
+    main {
+        padding: 120px 20px 40px; /* Justerer padding for mindre skjermer */
+    }
+
+    section {
+        scroll-margin-top: 120px; /* Justerer scroll-margin-top i forhold til headerens høyde */
+    }
+
+    h2 {
+        font-size: 28px; /* Reduserer skriftstørrelsen på seksjonstitler */
+    }
+
+    p {
+        font-size: 16px; /* Reduserer skriftstørrelsen på brødtekst */
+    }
+
+    .om-meg-innhold {
+        display: block; /* Endrer layout til blokkvisning */
+    }
+
+    .om-meg-innhold img {
+        margin: 0 auto 20px auto; /* Sentraliserer bildet og legger til margin under */
+        display: block; /* Sørger for at bildet oppfører seg som et blokk-element */
+        width: 100%; /* Bildet fyller tilgjengelig bredde */
+        max-width: 200px; /* Setter maksimal bredde på bildet */
+    }
+
+    .om-meg-innhold ul {
+        flex-direction: column; /* Arrangerer listeelementene vertikalt */
+    }
+
+    .om-meg-innhold ul li {
+        width: 100%; /* Listeelementene fyller hele bredden */
+        text-align: center; /* Sentraliserer teksten */
+    }
+
+    .prosjekt-liste {
+        display: block; /* Endrer layout til blokkvisning */
+    }
+
+    article {
+        margin-bottom: 40px; /* Legger til margin under hvert prosjekt */
+    }
+
+    form input[type="submit"] {
+        font-size: 16px; /* Reduserer skriftstørrelsen på knappen */
+    }
+}
