@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Definerer dokumenttypen som HTML5 -->
+<html lang="en">
+<head>
+    <!-- Angir tegnsettet til UTF-8 for å sikre at spesialtegn vises korrekt -->
+    <meta charset="UTF-8">
+    <!-- Gjør nettsiden responsiv ved å tilpasse bredden til skjermen som brukes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dokumentets tittel som vises i nettleserfanen -->
+    <title>Cat photo app</title>
+</head>
+<body>
+    <main>
+      <!-- Hovedoverskrift for applikasjonen -->
+      <h1>CatPhotoApp</h1>
+      <section>
+        <!-- Seksjon for kattebilder -->
+        <h2>Cat Photos</h2>
+        <!-- Kommentar: TODO minner om å legge til en lenke til kattebilder i fremtiden -->
+        <!-- TODO: Add link to cat photos -->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <!-- Bilde med en lenke til en ekstern nettside som åpnes ved klikk -->
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>
+      <section>
+        <!-- Seksjon for katte-relaterte lister -->
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <!-- Punktliste over ting som katter elsker -->
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <!-- Bilde av lasagne med bildetekst -->
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <!-- Nummerert liste over ting som katter hater -->
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <!-- Bilde av flere katter med bildetekst -->
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+        </figure>
+      </section>
+      <section>
+        <!-- Seksjon for skjema relatert til katter -->
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <!-- Gruppe med radioknapper som representerer valg mellom innekatt og utekatt -->
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <!-- Gruppe med avkrysningsbokser for å beskrive kattens personlighet -->
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <!-- Tekstfelt for å oppgi URL til et kattebilde -->
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <!-- Send inn-knapp for skjemaet -->
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <!-- Bunntekst med lenke til freeCodeCamp.org -->
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
