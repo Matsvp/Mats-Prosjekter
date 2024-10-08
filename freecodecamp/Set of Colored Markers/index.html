@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <!-- Angir karaktersettet til HTML-dokumentet som UTF-8 -->
+    <meta charset="utf-8">
+    <!-- Gjør siden responsiv ved å tilpasse bredden til enhetens visningsområde -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title>Document</title>
-</head>
-<body>
+    <title>Colored Markers</title>
+    <!-- Kobler til et eksternt CSS-stilark for styling av markørene -->
+    <link rel="stylesheet" href="CSS/style_markers.css">
+  </head>
+  <body>
+    <!-- Hovedoverskrift for siden -->
+    <h1>CSS Color Markers</h1>
     
-</body>
+    <!-- Beholder for markørene, som inneholder flere individuelle markører -->
+    <div class="container">
+      <!-- Markør med rød farge -->
+      <div class="marker red">
+        <div class="cap"></div> <!-- Lokk som representerer toppen av markøren -->
+        <div class="sleeve"></div> <!-- Selve kroppen til markøren, der fargen vises -->
+      </div>
+      
+      <!-- Markør med grønn farge -->
+      <div class="marker green">
+        <div class="cap"></div> <!-- Lokk som representerer toppen av markøren -->
+        <div class="sleeve"></div> <!-- Selve kroppen til markøren, der fargen vises -->
+      </div>
+
+      <!-- Markør med blå farge -->
+      <div class="marker blue">
+        <div class="cap"></div> <!-- Lokk som representerer toppen av markøren -->
+        <div class="sleeve"></div> <!-- Selve kroppen til markøren, der fargen vises -->
+      </div>
+    </div>
+  </body>
 </html>

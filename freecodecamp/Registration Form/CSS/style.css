@@ -1,0 +1,93 @@
+/* Setter hele nettsidens bredde og høyde, fjerner marginer og setter bakgrunnsfarge og tekstfarge */
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32; /* Mørk blå/lilla bakgrunnsfarge */
+    color: #f5f6f7; /* Lys farge for teksten som skiller seg ut mot bakgrunnen */
+    font-family: Tahoma; /* Setter fonten til Tahoma */
+    font-size: 16px; /* Setter standard skriftstørrelse til 16px */
+}
+
+/* Styling for overskrifter (h1) og paragraf-tekster (p) */
+h1, p {
+    margin: 1em auto; /* Margin som sentrerer elementene vertikalt */
+    text-align: center; /* Sentraliserer tekstene */
+}
+
+/* Styling for selve skjemaet */
+form {
+    width: 60vw; /* Skjemaets bredde er 60% av visningsvinduets bredde */
+    max-width: 500px; /* Maksimal bredde på skjemaet er 500px */
+    min-width: 300px; /* Minimum bredde på skjemaet er 300px */
+    margin: 0 auto; /* Sentraliserer skjemaet horisontalt */
+    padding-bottom: 2em; /* Legger til litt plass under skjemaet */
+}
+
+/* Styling for feltsettene i skjemaet */
+fieldset {
+    border: none; /* Fjerner standard kantlinje rundt feltsettet */
+    padding: 2rem 0; /* Legger til padding over og under feltsettet */
+    border-bottom: 3px solid #3b3b4f; /* Legger til en bunnkantlinje for å skille feltene */
+}
+
+/* Fjerner bunnkantlinjen for det siste feltsettet */
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+/* Styling for etiketter i skjemaet */
+label {
+    display: block; /* Gjør at hver label vises på en egen linje */
+    margin: 0.5rem 0; /* Legger til margin over og under hver label */
+}
+
+/* Styling for input-felter, tekstområder og select-elementer */
+input,
+textarea,
+select {
+    margin: 10px 0 0 0; /* Legger til margin på toppen av elementet */
+    width: 100%; /* Setter bredden til 100% av sin beholder */
+    min-height: 2em; /* Setter minimum høyde for elementene til 2em */
+}
+
+/* Styling for input og textarea for å matche bakgrunnsfargen med resten av siden */
+input, textarea {
+    background-color: #0a0a23; /* Mørk blå bakgrunnsfarge */
+    border: 1px solid #0a0a23; /* Setter kantlinjen til samme farge som bakgrunnen */
+    color: #ffffff; /* Hvit tekst for bedre kontrast */
+}
+
+/* Styling for inline-elementer, som radioknapper og avkrysningsbokser */
+.inline {
+    width: unset; /* Fjerner breddeinnstilling for inline-elementer */
+    margin: 0 0.5em 0 0; /* Legger til margin til høyre for elementene */
+    vertical-align: middle; /* Justerer elementene til å være på linje med midten av teksten */
+}
+
+/* Styling for submit-knappen */
+input[type="submit"] {
+    display: block; /* Setter submit-knappen til å være en blokk (tar hele bredden) */
+    width: 60%; /* Setter knappen til å ta 60% av bredden til skjemaet */
+    margin: 1em auto; /* Sentraliserer knappen horisontalt */
+    height: 2em; /* Setter høyden til knappen */
+    font-size: 1.1rem; /* Litt større tekst for å gjøre den mer synlig */
+    background-color: #3b3b4f; /* Mørk gråblå bakgrunnsfarge */
+    border-color: white; /* Setter kantlinjen til hvit farge */
+    min-width: 300px; /* Setter minimumsbredden til 300px */
+}
+
+/* Spesifikk styling for filopplasting-input */
+input[type="file"] {
+    padding: 1px 2px; /* Setter padding for filopplastingsinput for å gjøre det mer oversiktlig */
+}
+
+/* Forsikrer at .inline klasse også har display inline for visse situasjoner */
+.inline {
+    display: inline; 
+}
+
+/* Styling for lenker */
+a {
+    color: #dfdfe2; /* Setter lenkefargen til en lysere grå farge for å stå i kontrast til bakgrunnen */
+}

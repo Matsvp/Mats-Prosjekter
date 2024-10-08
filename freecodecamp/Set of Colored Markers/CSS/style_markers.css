@@ -1,0 +1,55 @@
+/* Styling for hovedoverskriften */
+h1 {
+    text-align: center; /* Sentraliserer overskriften for bedre visuell balanse */
+}
+
+/* Styling for beholderen som inneholder markørene */
+.container {
+    background-color: rgb(255, 255, 255); /* Setter bakgrunnsfargen til hvit for markørbeholderen */
+    padding: 10px 0; /* Legger til litt padding over og under markørene */
+}
+
+/* Generell styling for alle markørene */
+.marker {
+    width: 200px; /* Setter bredden til markørene */
+    height: 25px; /* Setter høyden til markørene */
+    margin: 10px auto; /* Sentraliserer markørene og legger til litt mellomrom mellom dem */
+}
+
+/* Styling for lokket på markørene */
+.cap {
+    width: 60px; /* Setter bredden på lokket */
+    height: 25px; /* Setter høyden på lokket til å matche resten av markøren */
+}
+
+/* Styling for kroppen på markørene */
+.sleeve {
+    width: 110px; /* Setter bredden på kroppen til markørene */
+    height: 25px; /* Setter høyden til å matche lokket */
+    background-color: rgba(255, 255, 255, 0.5); /* Gjør markørkroppen delvis gjennomsiktig for en visuell effekt */
+    border-left: 10px double rgba(0, 0, 0, 0.75); /* Legger til en dobbel kantlinje på venstre side av kroppen */
+}
+
+/* Styling for både lokket og kroppen til markørene */
+.cap, .sleeve {
+    display: inline-block; /* Gjør at lokket og kroppen vises ved siden av hverandre på samme linje */
+}
+
+/* Spesifikk styling for den røde markøren */
+.red {
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27)); /* Legger til en lineær gradient for å gi markøren flere nyanser av rødt */
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8); /* Gir markøren en rød skyggeeffekt for dybde */
+}
+
+/* Spesifikk styling for den grønne markøren */
+.green {
+    background: linear-gradient(#55680D, #71F53E, #116C31); /* Bruker en gradient med forskjellige nyanser av grønt */
+    box-shadow: 0 0 20px 0 #3B7E20CC; /* Gir markøren en grønn skyggeeffekt for dybde */
+}
+
+/* Spesifikk styling for den blå markøren */
+.blue {
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%)); /* Bruker HSL-farger for å gi en blå gradient med flere nyanser */
+    box-shadow: 0 0 20px 0 blue; /* Gir markøren en blå skyggeeffekt for dybde */
+}
+  
