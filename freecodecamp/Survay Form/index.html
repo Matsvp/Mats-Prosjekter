@@ -7,55 +7,76 @@
     <title>Survey Form</title>
 </head>
 <body>
-<h1 id="title">Survay</h1>
-<p id="description">This is a survay</p>
-<form id="survey-form" method="post" action="#">
-<fieldset>
-    <!-- Navn input -->
-    <label id="name-label" for="name">Name:<input id="name" type="text" placeholder="Enter your name" required></label>
-    <!-- E-post input -->
-    <label id="email-label" for="email">Email:<input id="email" type="email" placeholder="Enter your email" required></label>
-    <!-- Telefonnummer input -->
-    <label id="number-label" for="number">Number:<input type="tel" pattern="[0-9]{8}" placeholder="Enter your phone number" required></label>
+    <h1 id="title">Survey</h1>
+    <p id="description">This is a survey</p>
+    <form id="survey-form" method="post" action="#">
+        <fieldset>
+            <!-- Navn input -->
+            <label id="name-label" for="name">Name:
+                <input id="name" type="text" placeholder="Enter your name" required>
+            </label>
+            <!-- E-post input -->
+            <label id="email-label" for="email">Email:
+                <input id="email" type="email" placeholder="Enter your email" required>
+            </label>
+            <!-- Telefonnummer input -->
+            <label id="number-label" for="number">Number:
+                <input id="number" type="number" min="1" max="100" placeholder="Enter your phone number" required>
+            </label>
 
-    <!-- Dropdown input -->
-     <label for="dropdown">What is your favorite feature?
-        <select name="dropdown" id="feature">
-            <option value="usability">Usability</option>
-            <option value="design">Design</option>
-            <option value="speed">Speed</option>
-        </select>
-     </label>
-    </fieldset>
-    <!-- Radio buttons -->
-    <p>How did you hear about us?</p>
-    <fieldset>
-        <label for="friend"> <input type="radio" name="source" value="friend" class="inline" checked>Friend</label>
-        <label for="ad"> <input type="radio" name="source" value="ad" class="inline">AD</label>
-        <label for="internett"> <input type="radio" name="source" value="internett" class="inline">Internett</label>
-    </fieldset>
-    <!-- Checkboxes -->
-    <p>What do you use our service for? (Select all that apply)</p>
-     <fieldset>
-        <label for="business"><input type="checkbox" name="usage" value="business" class="inline">Business</label>
-        <label for="personal"><input type="checkbox" name="usage" value="personal" class="inline">Personal</label>
-        <label for="education"><input type="checkbox" name="usage" value="education" class="inline">Education</label>
-     </fieldset>
-     <!-- Textarea for additional kommentarer -->
-     <p>Any comments or suggestions?</p>
-     <fieldset>
-        <label for="comments">
-        <textarea name="comments" id="comments" placeholder="Enter your comments here..."></textarea>
-    </label>
-     </fieldset>
-     <!-- Label og avkrysningsboks for å godta vilkår og betingelser -->
-     <label for="terms-and-conditions">
-        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="#">terms and conditions</a>
-      </label>
+            <!-- Dropdown input -->
+            <label for="dropdown">What is your favorite feature?
+                <select name="dropdown" id="dropdown">
+                    <option value="usability">Usability</option>
+                    <option value="design">Design</option>
+                    <option value="speed">Speed</option>
+                </select>
+            </label>
+        </fieldset>
+        
+        <!-- Radio buttons -->
+        <p>How did you hear about us?</p>
+        <fieldset>
+            <label for="friend">
+                <input type="radio" id="friend" name="source" value="friend" class="inline" checked> Friend
+            </label>
+            <label for="ad">
+                <input type="radio" id="ad" name="source" value="ad" class="inline"> AD
+            </label>
+            <label for="internett">
+                <input type="radio" id="internett" name="source" value="internet" class="inline"> Internet
+            </label>
+        </fieldset>
 
-      <!-- Send inn-knappen for å sende skjemaet til serveren -->
-      <input type="submit" value="Submit" />
-</form>
+        <!-- Checkboxes -->
+        <p>What do you use our service for? (Select all that apply)</p>
+        <fieldset>
+            <label for="business">
+                <input type="checkbox" id="business" name="usage" value="business" class="inline"> Business
+            </label>
+            <label for="personal">
+                <input type="checkbox" id="personal" name="usage" value="personal" class="inline"> Personal
+            </label>
+            <label for="education">
+                <input type="checkbox" id="education" name="usage" value="education" class="inline"> Education
+            </label>
+        </fieldset>
+        
+        <!-- Textarea for additional kommentarer -->
+        <p>Any comments or suggestions?</p>
+        <fieldset>
+            <label for="comments">
+                <textarea name="comments" id="comments" placeholder="Enter your comments here..."></textarea>
+            </label>
+        </fieldset>
+        
+        <!-- Label og avkrysningsboks for å godta vilkår og betingelser -->
+        <label for="terms-and-conditions">
+            <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" value="accepted" /> I accept the <a href="#">terms and conditions</a>
+        </label>
 
+        <!-- Send inn-knappen for å sende skjemaet til serveren -->
+        <input type="submit" value="Submit" id="submit" />
+    </form>
 </body>
 </html>
